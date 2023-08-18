@@ -1116,9 +1116,9 @@ const restaurantList = [
 
 ];
 
-const RestaurantCard = ({restaurant}) => {
+const RestaurantCard = ({name, cuisines, areaName, cloudinaryImageId}) => {
     // desturcturing objects
-    const {name, cuisines, areaName, cloudinaryImageId} =restaurant.info;
+    // const {name, cuisines, areaName, cloudinaryImageId} =restaurant.info;
   return (
     // // this is hardcoded
     // <div className="card">
@@ -1141,15 +1141,15 @@ const RestaurantCard = ({restaurant}) => {
 const Body = () => {
   return (
     <div className="restaurantList">
-      <RestaurantCard  restaurant={restaurantList[0]}/>
-      <RestaurantCard restaurant={restaurantList[1]}/>
-      <RestaurantCard restaurant={restaurantList[2]}/>
-      <RestaurantCard restaurant={restaurantList[3]}/>
-      <RestaurantCard restaurant={restaurantList[4]}/>
-      <RestaurantCard restaurant={restaurantList[5]}/>
-      <RestaurantCard restaurant={restaurantList[6]}/>
-      <RestaurantCard restaurant={restaurantList[7]}/>
-      <RestaurantCard restaurant={restaurantList[8]}/>
+      <RestaurantCard  {...restaurantList[0].info} />
+      <RestaurantCard {...restaurantList[1].info} />
+      <RestaurantCard {...restaurantList[2].info} />
+      <RestaurantCard {...restaurantList[3].info} />
+      <RestaurantCard {...restaurantList[4].info} />
+      <RestaurantCard {...restaurantList[5].info} />
+      <RestaurantCard {...restaurantList[6].info} />
+      <RestaurantCard {...restaurantList[7].info} />
+      <RestaurantCard {...restaurantList[8].info} />
       
     </div>
   );
