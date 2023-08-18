@@ -1116,7 +1116,7 @@ const restaurantList = [
 
 ];
 
-const RestaurantCard = () => {
+const RestaurantCard = (props) => {
   return (
     // // this is hardcoded
     // <div className="card">
@@ -1129,23 +1129,26 @@ const RestaurantCard = () => {
     //    created using dynamically props
 
     <div className="card">
-      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+restaurantList[0].info?.cloudinaryImageId} />
-      <h2>{restaurantList[0].info?.name}</h2>
-      <h3>{restaurantList[0].info?.cuisines.join(", ")}</h3>
-      <h4>{restaurantList[0].info?.areaName}</h4>
+      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+props.restaurant.info?.cloudinaryImageId} />
+      <h2>{props.restaurant.info?.name}</h2>
+      <h3>{props.restaurant.info?.cuisines.join(", ")}</h3>
+      <h4>{props.restaurant.info?.areaName}</h4>
     </div>
   );
 };
 const Body = () => {
   return (
     <div className="restaurantList">
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
-      <RestaurantCard />
+      <RestaurantCard  restaurant={restaurantList[0]}/>
+      <RestaurantCard restaurant={restaurantList[1]}/>
+      <RestaurantCard restaurant={restaurantList[2]}/>
+      <RestaurantCard restaurant={restaurantList[3]}/>
+      <RestaurantCard restaurant={restaurantList[4]}/>
+      <RestaurantCard restaurant={restaurantList[5]}/>
+      <RestaurantCard restaurant={restaurantList[6]}/>
+      <RestaurantCard restaurant={restaurantList[7]}/>
+      <RestaurantCard restaurant={restaurantList[8]}/>
+      
     </div>
   );
 };
