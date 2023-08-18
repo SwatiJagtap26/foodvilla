@@ -1116,7 +1116,9 @@ const restaurantList = [
 
 ];
 
-const RestaurantCard = (props) => {
+const RestaurantCard = ({restaurant}) => {
+    // desturcturing objects
+    const {name, cuisines, areaName, cloudinaryImageId} =restaurant.info;
   return (
     // // this is hardcoded
     // <div className="card">
@@ -1129,10 +1131,10 @@ const RestaurantCard = (props) => {
     //    created using dynamically props
 
     <div className="card">
-      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+props.restaurant.info?.cloudinaryImageId} />
-      <h2>{props.restaurant.info?.name}</h2>
-      <h3>{props.restaurant.info?.cuisines.join(", ")}</h3>
-      <h4>{props.restaurant.info?.areaName}</h4>
+      <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} />
+      <h2>{name}</h2>
+      <h3>{cuisines.join(", ")}</h3>
+      <h4>{areaName}</h4>
     </div>
   );
 };
