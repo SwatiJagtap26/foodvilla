@@ -23,3 +23,8 @@ display: flex;
 .card > img{
   width: 100%;
 }
+.restaurantList{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
